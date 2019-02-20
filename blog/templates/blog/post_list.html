@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Let's vamo!</title>
-	</head>
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
 
-	<body> 
-		<p>Hey Bú!</p>
-		<p>Parece que rolou, o que acha ?</p>
-	</body>
-</html>
+{% for post in posts %}
+    <div>
+        <p>publicado em: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
